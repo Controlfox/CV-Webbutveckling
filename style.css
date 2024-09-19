@@ -5,6 +5,15 @@ body
     background-size: cover;
 }
 
+.main-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .container-info
 {
     display: flex;
@@ -12,6 +21,8 @@ body
     justify-content: center;
     align-items: center;
     text-align: center;
+    backdrop-filter: blur(8px);
+    flex: content;
 }
 
 #jag
@@ -40,5 +51,15 @@ button
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
+    flex: 50%;
+    
+}
 
+@media (max-width: 800px)
+{
+    .main-container
+    {
+        flex-direction: column;
+    }
 }
