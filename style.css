@@ -3,6 +3,9 @@ body
     background-image: url("Bild/minFavvoPlats.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: black;
 }
 
 .main-container
