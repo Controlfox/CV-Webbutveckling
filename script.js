@@ -38,3 +38,11 @@ erfarenhetBtn.addEventListener("click", function()
         element.classList.toggle("container-CV");
     }
 });
+
+const projektBtn = document.getElementsByClassName("projektBtn")
+const projektBtnStor = document.getElementsByClassName("projektBtn-stor")
+
+projektBtn.addEventListener("click", function()
+{
+    
+});

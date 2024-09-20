@@ -6,6 +6,24 @@ body
     background-position: center center;
     background-attachment: fixed;
     background-color: black;
+
+}
+
+h1, h3, h4, h2
+{
+    font-family: 'UltimaPDbc', sans-serif;
+    margin-bottom: 10px;
+}
+
+ul
+{
+    margin-top: -0px;
+}
+
+p, li
+{
+    font-family: 'Nixie One', sans-serif;
+    margin-top: 5px;       
 }
 
 .main-container
@@ -15,6 +33,7 @@ body
     justify-content: center;
     align-items: space-evenly;
     text-align: center;
+    position: relative;
 }
 
 .container-info
@@ -22,20 +41,20 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: space-around;
     text-align: center;
     backdrop-filter: blur(8px);
-    flex: content;
-    background: rgba(92, 102, 91, 40%);
+    flex: 50%;
+    background: rgba(92, 102, 91, 70%);
     margin: 20px 20px 20px 20px;
     padding: 15px 15px 15px 15px;
-    border-radius: 40% 0% 40% 0%;
+    border-radius: 100px 0px 0px 100px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
 }
 
 #jag
 {
-    border-radius: 10%;
-    width: 25%;
+    border-radius: 40px;
+    width: 30%;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
     margin-bottom: 2%;
 }
@@ -43,36 +62,63 @@ body
 .button
 {
     display: none;
+    font-size: large;
 }
 
-.container-omMig-hidden, .container-CV-hidden
+.container-CV-hidden
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     text-align: left;
     flex: 50%;
     backdrop-filter: blur(8px);
-    background: rgba(92, 102, 91, 40%);
+    background: rgba(92, 102, 91, 70%);
     margin: 20px 20px 20px 20px;
     padding: 15px 15px 15px 15px;
-    border-radius: 10%;
+    border-radius: 0px 100px 100px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
 }
 
-.container-omMig, .container-CV
+.container-CV
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     text-align: left;
     flex: 50%;
     backdrop-filter: blur(8px);
-    background: rgba(92, 102, 91, 40%);
+    background: rgba(92, 102, 91, 70%);
     margin: 20px 20px 20px 20px;
     padding: 15px 15px 15px 15px;
-    border-radius: 10%;
+    border-radius: 0px 100px 100px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+}
+
+.container-omMig-hidden
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 50%;
+    backdrop-filter: blur(8px);
+    background: rgba(92, 102, 91, 70%);
+    margin: 20px 20px 20px 20px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+}
+
+.container-omMig
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 50%;
+    backdrop-filter: blur(8px);
+    background: rgba(92, 102, 91, 70%);
+    margin: 20px 20px 20px 20px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
 }
 
 a
@@ -80,12 +126,42 @@ a
     margin-right: 10px;
 }
 
+.container-footer
+{
+    margin-top: 30px;
+}
+
 .container-footer-mobil
 {
     display: none;
 }
 
+.projektBtn
+{
+    display: none;
+}
 
+.projektBtn-stor
+{
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    background-color:rgba(92, 102, 91, 70%);
+    border: none;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'UltimaPDbc', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
+    font-size: x-large;
+}
+
+.projektBtn-stor:hover
+{
+    background-color:rgba(92, 102, 91, 100%);
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
+}
 
 @media (max-width: 800px)
 {
@@ -93,25 +169,39 @@ a
     {
         flex-direction: column;
     }
-    .button
+    .container-info
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        flex: 50%;
+        background: rgba(92, 102, 91, 70%);
+        margin: 20px 20px 20px 20px;
+        padding: 15px 15px 15px 15px;
+        border-radius: 150px 0px 150px 0px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+    }
+    .button, .projektBtn
     {
         display: block;
+        bottom: -100px;
         width: 50%;
         height: 50px;
         margin-left: 25%;
         margin-right: 25%;
         margin-top: 10px;
         transition-duration: 0.4s;
-        background-color:rgba(92, 102, 91, 50%);
+        background-color:rgba(92, 102, 91, 10%);
         border: none;
         text-decoration: none;
         border-radius: 20px;
+        font-family: 'UltimaPDbc', sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
+        font-size: x-large;
     }
-    .button:hover
-    {
-        background-color:rgba(92, 102, 91, 100%);
-        box-shadow: none;
-    }
+
     .container-omMig-hidden, .container-CV-hidden
     {
         display: none;
@@ -125,10 +215,11 @@ a
         text-align: left;
         flex: 50%;
         backdrop-filter: blur(8px);
-        background: rgba(92, 102, 91, 40%);
+        background: rgba(92, 102, 91, 70%);
         margin: 20px 20px 20px 20px;
         padding: 15px 15px 15px 15px;
-        border-radius: 10%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
     }
     .container-footer-mobil
     {
@@ -141,6 +232,10 @@ a
         margin-bottom: 15px;
     }
     .container-footer
+    {
+        display: none;
+    }
+    .projektBtn-stor, .projektBtn-stor:hover
     {
         display: none;
     }
