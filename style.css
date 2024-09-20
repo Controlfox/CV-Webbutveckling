@@ -75,6 +75,18 @@ body
     border-radius: 10%;
 }
 
+a
+{
+    margin-right: 10px;
+}
+
+.container-footer-mobil
+{
+    display: none;
+}
+
+
+
 @media (max-width: 800px)
 {
     .main-container
@@ -93,6 +105,7 @@ body
         background-color:rgba(92, 102, 91, 50%);
         border: none;
         text-decoration: none;
+        border-radius: 20px;
     }
     .button:hover
     {
@@ -116,5 +129,19 @@ body
         margin: 20px 20px 20px 20px;
         padding: 15px 15px 15px 15px;
         border-radius: 10%;
+    }
+    .container-footer-mobil
+    {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .container-footer
+    {
+        display: none;
     }
 }
