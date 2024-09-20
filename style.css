@@ -1,23 +1,68 @@
-*
+body
 {
-    margin: 0;
-    padding: 0;
+    background-image: url("Bild/minFavvoPlats.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: black;
 }
 
-.container
+.main-container
 {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.container-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    flex: content;
 }
 
 #jag
 {
     border-radius: 10%;
-    width: 20%;
+    width: 25%;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
     margin-bottom: 2%;
 }
 
+button
+{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+}
 
+.container-omMig-hidden, .container-CV-hidden
+{
+    display: none;
+}
+
+.container-omMig, .container-CV
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex: 50%;
+    
+}
+
+@media (max-width: 800px)
+{
+    .main-container
+    {
+        flex-direction: column;
+    }
+}

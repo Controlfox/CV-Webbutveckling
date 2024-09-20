@@ -6,29 +6,24 @@
     <title>Tintin Larsson</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    
 </head>
 <body>
 
-    <nav class="container">
-
-    <nav class="container-nav">
-        <Button id="omMigBtn">Om mig</Button>
-        <Button id="erfarenhetBtn">Erfarenheter</Button>
-    </nav>
-
-    <header class="container-header">
-
+    <div class="main-container">
+        <div class="container-info">
+            <header>
+                <img id="jag" src="Bild/image.png" alt="Bild på mig">
+                <h1>Tintin Larsson</h1>
+                <h4>TTlarsson@outlook.com</h4>
+            </header>
+            <nav>
+                <button id="omMigBtn">Om mig</button>
+                <Button id="ErfarenheterBtn">Erfarenheter</Button>
+            </nav>
         </div>
-        <div class="Kontakt">
-            <img id="jag" src="Bild/image.png" alt="Bild på mig">
-            <h1 id="namn">Tintin Larsson</h1>
-            <h3>TTlarsson@outlook.com</h3>
-        </div>
-
-    </header>
-
-    <main class="container-main">
-        <div class="omMig">
+    
+        <div class="container-omMig-hidden">
             <p>Jag har tidigare jobbat inom många olika områden, men aldrig hittat hem. När jag upptäckte programmering och webbutveckling var det som att allt klickade.
                 Jag sitter gärna i timmar varje dag och kodar, just för att det är kul och intressant.
                 När jag väl börjat med ett projekt så har jag väldigt svårt att slita mig ifrån det innan allt är perfekt och det absolut roligaste med det är att man konstant lär sig
@@ -36,32 +31,32 @@
                 Eftersom att jag tidigare jobbat inom olika områden så har jag lärt mig att snabbt anpassa mig efter arbetsuppgifter och situationer, vilket jag upptäckt varit en
                 mycket bra egenskap inom programmering.
             </p>
-            <ul class="egenskaper">
+            <h5>Egenskaper</h5>
+            <ul>
                 <li>Anpassningsbar</li>
                 <li>Uppmärksam</li>
                 <li>Intresserad</li>
             </ul>
         </div>
-    </main>
-
-    <div class="container-CV">
-        <h3>Arbetsherfarenheter</h3>
-        <ul>
-            <li>Ressel Rederi</li>
-            <li>Bilia</li>
-            <li>Balingsholms kursgård</li>
-            <li>Frendo skogås</li>
-            <li>Stockholm actioncenter</li>
-            <li>Pille repmakarn</li>
-            <li>Östlund + Westin</li>
-        </ul>
-        <h4>Förtroende uppdrag</h4>
-        <ul>
-            <li>Ordförande Grillska elevkår</li>
-            <li>Regissör och videograf reklamfilm för Grillska gymnasium</li>
-        </ul>
+    
+        <div class="container-CV-hidden">
+            <h3>Arbetsherfarenheter</h3>
+            <ul>
+                <li>Ressel Rederi</li>
+                <li>Bilia</li>
+                <li>Balingsholms kursgård</li>
+                <li>Frendo skogås</li>
+                <li>Stockholm actioncenter</li>
+                <li>Pille repmakarn</li>
+                <li>Östlund + Westin</li>
+            </ul>
+            <h4>Förtroende uppdrag</h4>
+            <ul>
+                <li>Ordförande Grillska elevkår</li>
+                <li>Regissör och videograf reklamfilm för Grillska gymnasium</li>
+            </ul>
+        </div>
     </div>
 
-    </nav>
 </body>
 </html>
