@@ -2,6 +2,8 @@ let containerOmMig = document.getElementsByClassName("container-omMig-hidden");
 let containerCV = document.getElementsByClassName("container-CV-hidden");
 const omMigBtn = document.getElementById("omMigBtn");
 const erfarenhetBtn = document.getElementById("ErfarenheterBtn");
+const projektBtn = document.getElementById("projektBtn")
+
 
 omMigBtn.addEventListener("click", function()
 {
@@ -39,10 +41,35 @@ erfarenhetBtn.addEventListener("click", function()
     }
 });
 
-const projektBtn = document.getElementsByClassName("projektBtn")
-const projektBtnStor = document.getElementsByClassName("projektBtn-stor")
+document.addEventListener("DOMContentLoaded", function() {
+    let containerAPI = document.getElementById("containerAPI");
 
-projektBtn.addEventListener("click", function()
-{
-    
+    projektBtn.addEventListener("click", function() {
+
+        containerAPI.innerHTML = "";
+
+        fetch("https://api.github.com/users/controlfox/repos")
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(repo => {
+                let repoDiv = document.createElement("div");
+                repoDiv.classList.add("repo-item");
+                repoDiv.innerHTML = `
+                    <h3>${repo.name}</h3>
+                    <p>${repo.description ? repo.description : "Ingen beskrivning tillgänglig"}</p>
+                    <a href="${repo.html_url}" target="_blank">Besök repo</a>
+                `;
+                containerAPI.appendChild(repoDiv);
+            });
+        })
+        .catch(error => {
+            console.error("Ett fel inträffade:", error);
+        });
+
+        if (!containerAPI.classList.contains("container-API")) {
+            containerAPI.classList.add("container-API-hidden");
+        }
+
+        containerAPI.classList.toggle("container-API");
+    });
 });
