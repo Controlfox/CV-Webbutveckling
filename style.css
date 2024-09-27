@@ -135,7 +135,7 @@ p, li
     box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
 }
 
-.container-API
+#containerAPI
 {
     display: flex;
     flex-direction: column;
@@ -210,11 +210,26 @@ a
         height: 55px;
     }
 
-    .container-omMig-hidden, .container-CV-hidden, .container-API-hidden
+    .container-omMig-hidden, .container-CV-hidden
     {
         display: none;
     }
-    .container-omMig, .container-CV, .container-API
+    .container-omMig, .container-CV
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: left;
+        flex: 50%;
+        backdrop-filter: blur(8px);
+        background: rgba(92, 102, 91, 70%);
+        margin: 20px 20px 20px 20px;
+        padding: 15px 15px 15px 15px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+    }
+    #containerAPI
     {
         display: flex;
         flex-direction: column;
